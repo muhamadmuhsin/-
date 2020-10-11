@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muhamad Muhsin</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Comic Sans MS", Comic Sans MS;
+        }
+        
+        .profile {
+            width: 320px;
+            height: 500px;
+            position: relative;
+            text-align: center;
+            margin: 70px auto;
+            background: #b42e2e;
+            border-radius: 7px;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 40px 0;
+        }
+        
+        .social {
+            width: 310px;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            padding: 35px 5px;
+        }
+        
+        .social h2 {
+            font-size: 35px;
+            color: #f9f602;
+        }
+        
+        .social .first {
+            font-size: 20px;
+            color:#f9f602;
+            margin: -12px 0 0 0;
+            text-align: center;
+            line-height: 25px;
+        }
+        
+        .social .second {
+            font-size: 14px;
+            color: #f9f602;
+            width: 200px;
+            margin: 16px auto 40px auto;
+            line-height: 16px;
+        }
+        
+        .button {
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 12px 50px;
+            font-size: 20px;
+            color: #ffffff;
+            background: linear-gradient(50deg, #494BF9, #638EF5);
+            border-radius: 25px;
+        }
+        
+        .button:hover {
+            color: #ffffff;
+            background: linear-gradient(50deg, #638EF5, #494BF9);
+        }
+        
+        .icon {
+            margin: 48px 15px;
+        }
+        
+        .icon li {
+            list-style: none;
+            float: left;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 8px;
+            background: linear-gradient(#3591d2, #355ed2, #7e28af);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .icon a {
+            text-decoration: none;
+            margin: 0px;
+            color:#ffffff;
+            font-size: 25px;
+        }
+        
+        .icon li:hover,
+        .icon li a:hover {
+            color: blue;
+            background: linear-gradient(-50deg, #BD44F4, #494BF9);
+        }
+        /* Now responsive code is here */
+        
+        @media only screen and (max-width: 400px) {
+            .profile {
+                width: 290px;
+            }
+            .social {
+                width: 280px;
+            }
+            .icon {
+                margin: 48px 25px;
+            }
+            .icon li {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+            .icon li a i {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+</head>
+
+<body>
+
+    <div class="profile">
+        <img src="./l.jpg" alt="" />
+        <div class="social">
+            <h2>Muhamad Director</h2>
+            <p class="first">دیزاین و گرافیك مۆشن</p>
+            <p class="second">❤️LONDON❤️</p>
+            <a class="button" href="">سۆشیاڵەكانم</a>
+            <div class="icon">
+                <li><a href="https://www.facebook.com/muhamad.muhsin.902266/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://t.me/muhamad_muhsin"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC_1hOBfKh8_ar4NW2WexOgg"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/sultan_muhssen/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://snapchat.com/add/sultan3uk"><i class="fa fa-snapchat"></i></a></li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/velocity.ui.min.js"></script>
+
+
+    <!-- jquery link in the description -->
+
+
+    <script>
+        $.Velocity.RegisterUI("callout.twirl", {
+            defaultDuration: 3000,
+            calls: [
+                [{
+                    rotateZ: 1080
+                }, 0.50],
+                [{
+                    scaleX: 0.5
+                }, 0.25, {
+                    easing: "spring"
+                }],
+                [{
+                    scaleX: 1
+                }, 0.25, {
+                    easing: "spring"
+                }]
+            ]
+        });
+        $(".profile").velocity("callout.twirl");
+    </script>
+
+
+
+</body>
+
+</html>
